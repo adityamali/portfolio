@@ -5,7 +5,7 @@ html{
 body {
   margin: 0;
   overflow-x: 0;
-  background: #f5f5f7;
+  background: #f3eff5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-smooth: auto;
   -webkit-font-smoothing: antialiased;
@@ -64,7 +64,8 @@ a:hover{
 
 .cardgrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   column-gap: 4vw;
   row-gap: 3rem;
   padding-left: 10vw;
@@ -102,7 +103,7 @@ a:hover{
   background: linear-gradient(#2d8ccb, #1a6394);
   justify-content: center;
   text-align: center;
-  grid-column: span 4;
+  grid-column: span 5;
   animation: rightin 900ms ease-in-out;
 }
 
@@ -141,7 +142,7 @@ a:hover{
 .two{
   background-color: #222222;
   color: #e0e0e0;
-  grid-column: span 1;
+  grid-column: span 2;
   animation: leftin 1.3s ease-in-out;
 }
 
@@ -150,10 +151,8 @@ a:hover{
 }
 
 .three{
-  grid-column: span 2;
+  grid-column: span 3;
   animation: bottomin 1.3s ease-in-out;
-  grid-column-start: 2; 
-  grid-column-end: 5;
 }
 
 .space {
