@@ -10,42 +10,41 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="logo"></div>
-        <div class="navlist">
-            <ul>
-                <li><a href="#">Home</a>-</li>
-                <li><a href="#about">About</a>-</li>
-                <li><a href="">Skills</a>-</li>
-                <li><a href="">Contact</a>-</li>
-            </ul>
-        </div>
-    </header> -->
     <div class="viewport">
         <div class="container">
             <section id="home" style="margin-top: 60px">
                 <div class="cardgrid">
-                    <div class="card one" style="grid-column-start: 1; grid-column-end: 5" data-tilt data-tilt-max="2">
+                    <div class="card one m1" data-tilt data-tilt-max="2">
                         <div class="meimg">
                             <div class="avatar"></div>
                         </div>
                         <h1>Hey I'm Aditya</h1>
+                        <ul>
+                          <li><i class="fab fa-instagram social" onclick="window.location.href='https://www.instagram.com/theadityamali';"></i></li>
+                          <li><i class="fab fa-twitter social"></i></li>
+                          <li><i class="fab fa-github social" onclick="window.location.href='https://github.com/adityamali'"></i></li>
+                          <li><i class="fab fa-linkedin social" onclick="window.location.href='https://www.linkedin.com/in/adityamali2003/'"></i></li>
+                        </ul>
                     </div>
-                    <div id="about" class="card two" style="grid-column-start: 1; grid-column-end: 2">
+                    <div id="about" class="card two m1">
                         <p>
                             Hey So I'm Aditya Mali and currently I'm pursuing my Bachlors in Technology from Bharati Vidyapeeth Deemed to Be University College of Engineering Pune
                         </p>
                     </div>
-                    <div class="card three" style="grid-column-start: 2; grid-column-end: 5">
+                    <div class="card three m1">
 
                     </div>
-                    <div class="card" style="grid-column-start: 1; grid-column-end: 3">
+                    <div class="card m1" style="grid-column-start: 1; grid-column-end: 3">
 
                     </div>
                 </div>
             </section>
+            <div class="copyright">
+              <p>Made with HTML, CSS & JS by Aditya Mali</p>
+            </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/dd096b3ac9.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/vanila-tilt.js"></script>
     <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
     <script>const isTouchDevice = 'ontouchstart' in document.documentElement;

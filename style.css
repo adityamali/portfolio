@@ -9,6 +9,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-smooth: auto;
   -webkit-font-smoothing: antialiased;
+  cursor: url('assets/img/Mousepointer.png'),auto;
 }
 
 .SmoothScroll {
@@ -101,6 +102,8 @@ a:hover{
   background: linear-gradient(#2d8ccb, #1a6394);
   justify-content: center;
   text-align: center;
+  grid-column: span 4;
+  animation: rightin 900ms ease-in-out;
 }
 
 .one h1 {
@@ -110,20 +113,100 @@ a:hover{
   background-clip: text;
   -webkit-background-clip: text;
   perspective-origin: 10;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.one ul{
+  list-style: none;
+  display: inline-block;
+}
+
+.one li{
+  display: inline;
+  color: #f5f5f7;
+}
+
+.social{
+  font-size: 24px;
+  padding-right: 2rem;
+  transition: 200ms;
+}
+
+.social:hover{
+  transform: scale(1.2);
+  filter: drop-shadow( 0px 2px 4px 2px #f5f5f77a);
 }
 
 .two{
   background-color: #222222;
   color: #e0e0e0;
+  grid-column: span 1;
+  animation: leftin 1.3s ease-in-out;
 }
 
 .two p{
-  margin-top: 5rem;
+  margin-top: 8rem;
+}
+
+.three{
+  grid-column: span 2;
+  animation: bottomin 1.3s ease-in-out;
+  grid-column-start: 2; 
+  grid-column-end: 5;
 }
 
 .space {
   height: 100vh;
   background: #fff;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  width: 100%;
+}
+
+@keyframes topin {
+  from{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to{
+    opacity: 100;
+  }  
+}
+
+@keyframes rightin {
+  from{
+    font-size: 12px;
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to{
+    opacity: 100;
+  }  
+}
+
+@keyframes leftin {
+  from{
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to{
+    opacity: 100;
+  }  
+}
+
+@keyframes bottomin {
+  from{
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to{
+    opacity: 100;
+  }  
 }
 
 
@@ -140,7 +223,13 @@ a:hover{
 }
 
 @media screen and (max-width: 850px) {
+  .m1{
+    height: 25rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
   .cardgrid{
     grid-template-columns: repeat(1, 1fr);
+    column-gap: 0;
   }
 }
