@@ -112,13 +112,34 @@ a:hover{
   perspective-origin: 10;
 }
 
+.one ul{
+  list-style: none;
+  display: inline-block;
+}
+
+.one li{
+  display: inline;
+  color: #f5f5f7;
+}
+
+.social{
+  font-size: 24px;
+  padding-right: 2rem;
+  transition: 200ms;
+}
+
+.social:hover{
+  transform: scale(1.1);
+  filter: drop-shadow( 0px 2px 4px 2px #f5f5f77a);
+}
+
 .two{
   background-color: #222222;
   color: #e0e0e0;
 }
 
 .two p{
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 .space {
