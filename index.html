@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <header>
+        <div class="logo"></div>
+        <div class="navlist">
+            <ul>
+                <li><a href="#">Home</a>-</li>
+                <li><a href="#about">About</a>-</li>
+                <li><a href="">Skills</a>-</li>
+                <li><a href="">Contact</a>-</li>
+            </ul>
+        </div>
+    </header> -->
+    <div class="viewport">
+        <div class="container">
+            <section id="home" style="margin-top: 60px">
+                <div class="cardgrid">
+                    <div class="card one" style="grid-column-start: 1; grid-column-end: 5" data-tilt data-tilt-max="2">
+                        <div class="meimg">
+                            <div class="avatar"></div>
+                        </div>
+                        <h1>Hey I'm Aditya</h1>
+                    </div>
+                    <div id="about" class="card two" style="grid-column-start: 1; grid-column-end: 2">
+                        <p>
+                            Hey So I'm Aditya Mali and currently I'm pursuing my Bachlors in Technology from Bharati Vidyapeeth Deemed to Be University College of Engineering Pune
+                        </p>
+                    </div>
+                    <div class="card three" style="grid-column-start: 2; grid-column-end: 5">
+
+                    </div>
+                    <div class="card" style="grid-column-start: 1; grid-column-end: 3">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/vanila-tilt.js"></script>
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
+    <script>const isTouchDevice = 'ontouchstart' in document.documentElement;
+
+        disableScroll();
+        if (!isTouchDevice) smoothScroll();
+        
+        window.onresize = () => {
+          resizeBodyHeight();
+        };
+        
+        window.onload = () => {
+          enableScroll();
+          resizeBodyHeight();
+        };
+        
+        // Functions
+        
+        function disableScroll() {
+          document.body.style.overflow = 'hidden';
+        }
+        
+        function enableScroll() {
+          document.body.style.overflow = '';
+        }
+        
+        function smoothScroll() {
+          document.querySelector('.viewport').classList.add('SmoothScroll');
+        
+          new SmoothScroll({
+            target: document.querySelector('.container'),
+            scrollEase: 0.08,
+            maxOffset: 500,
+          });
+        }
+        
+        function resizeBodyHeight() {
+          document.body.style.height = document.querySelector('.viewport').scrollHeight + 'px';
+        }</script>
+</body>
+
+</html>
