@@ -10,6 +10,23 @@ body {
   font-smooth: auto;
   -webkit-font-smoothing: antialiased;
   cursor: url('assets/img/Mousepointer.png'),auto;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar{
+  width: 16px;
+}
+
+::-webkit-scrollbar-track{
+  width: 10px;
+  background-color: #f3eff5;
+}
+
+::-webkit-scrollbar-thumb{
+  background: transparent;
+  box-shadow: inset 0 0 10px 20px #22222271;
+  border-radius: 100px;
+  border: 4px solid #f3eff5;
 }
 
 .SmoothScroll {
@@ -20,26 +37,6 @@ body {
 
 .container {
   width: 100vw;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.navlist{
-  text-align: right;
-  top: 200px;
-  position: fixed;
-  right: 0px;
-}
-
-.navlist ul {
-  list-style: none;
-}
-
-.navlist li{
-  margin-top: 50px;
-  transition: 100ms;
 }
 
 a {
@@ -73,7 +70,6 @@ a:hover{
 }
 
 .card {
-  height: 22rem;
   border-radius: 15px;
   background: #fff;
   padding: 15px;
@@ -81,29 +77,11 @@ a:hover{
   border: 1px solid #f5f5f7;*/
 }
 
-.meimg {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.avatar{
-  height: 150px;
-  width: 150px;
-  border: 2px solid #f5f5f7;
-  box-shadow: 0 0 0 0.3px #222222;
-  border-radius: 100px;
-  background: url("assets/img/me.jpeg");
-  background-position: center;
-  background-size: cover;
-}
-
 .one{
   background: linear-gradient(#2d8ccb, #1a6394);
   justify-content: center;
   text-align: center;
-  grid-column: span 5;
+  grid-column: span 4;
   animation: rightin 900ms ease-in-out;
 }
 
@@ -128,6 +106,24 @@ a:hover{
   color: #f5f5f7;
 }
 
+.meimg {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar{
+  height: 150px;
+  width: 150px;
+  border: 2px solid #f5f5f7;
+  box-shadow: 0 0 0 0.3px #222222;
+  border-radius: 100px;
+  background: url("assets/img/me.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
 .social{
   font-size: 24px;
   padding-right: 2rem;
@@ -139,9 +135,13 @@ a:hover{
   filter: drop-shadow( 0px 2px 4px 2px #f5f5f77a);
 }
 
+.iam{
+  grid-row: span 2;
+}
+
 .two{
-  background-color: #222222;
-  color: #e0e0e0;
+  background-color: #e6b224;
+  color: #272727;
   grid-column: span 2;
   animation: leftin 1.3s ease-in-out;
 }
@@ -151,8 +151,26 @@ a:hover{
 }
 
 .three{
-  grid-column: span 3;
+  grid-column: span 2;
   animation: bottomin 1.3s ease-in-out;
+  background: #272727;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.three p{
+  margin: auto;
+  color: #f5f5f7;
+}
+
+.eternal{
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  background: url("assets/img/eternalmac.jpeg");
+  background-size: cover;
 }
 
 .space {
