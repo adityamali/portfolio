@@ -1,32 +1,120 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap");
+
 body {
   margin: 0;
+  padding: 0;
   overflow-x: 0;
-  background: #f3eff5;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f5f2e7;
   font-smooth: auto;
+  font-family: "Saira Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
-  cursor: url('assets/img/Mousepointer.png'),auto;
+  cursor: url("assets/img/Mousepointer.png"), auto;
   line-height: 1.6;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 16px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   width: 10px;
   background-color: #f3eff5;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: transparent;
   box-shadow: inset 0 0 10px 20px #22222271;
   border-radius: 100px;
   border: 4px solid #f3eff5;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 6; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #222222;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 5;
+  margin-left: 15px;
+  height: 100px;
+  width: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #1a1a1a;
+}
+
+.burger {
+  z-index: 5;
+  position: fixed;
+  right: 0;
+  margin-right: 70px;
+  margin-top: 28px;
+  height: 40px;
+  width: 32px;
+}
+
+svg #l1:hover {
+  animation: burger 200ms ease-in-out;
+}
+
+@keyframes burger {
+  from {
+    transform: rotate(90);
+  }
 }
 
 .SmoothScroll {
@@ -49,7 +137,7 @@ a {
   transition: 100ms;
 }
 
-a:hover{
+a:hover {
   font-size: 24px;
   color: #0000007c;
   font-weight: bold;
@@ -77,11 +165,11 @@ a:hover{
   border: 1px solid #f5f5f7;*/
 }
 
-.one{
-  background: linear-gradient(#2d8ccb, #1a6394);
+.one {
+  background: #084594; /*  linear-gradient(#084594, rgb(19, 71, 105)); */
   justify-content: center;
   text-align: center;
-  grid-column: span 4;
+  grid-column: span 5;
   animation: rightin 900ms ease-in-out;
 }
 
@@ -96,12 +184,12 @@ a:hover{
   margin-right: 10px;
 }
 
-.one ul{
+.one ul {
   list-style: none;
   display: inline-block;
 }
 
-.one li{
+.one li {
   display: inline;
   color: #f5f5f7;
 }
@@ -113,7 +201,7 @@ a:hover{
   justify-content: center;
 }
 
-.avatar{
+.avatar {
   height: 150px;
   width: 150px;
   border: 2px solid #f5f5f7;
@@ -124,47 +212,49 @@ a:hover{
   background-size: cover;
 }
 
-.social{
+.social {
   font-size: 24px;
   padding-right: 2rem;
   transition: 200ms;
 }
 
-.social:hover{
+.social:hover {
   transform: scale(1.2);
-  filter: drop-shadow( 0px 2px 4px 2px #f5f5f77a);
+  filter: drop-shadow(0px 2px 4px 2px #f5f5f77a);
 }
 
-.iam{
-  grid-row: span 2;
+.iam {
+  grid-row: span 1;
 }
 
-.two{
-  background-color: #e6b224;
+.two {
+  background-color: #ffd32d;
   color: #272727;
   grid-column: span 2;
   animation: leftin 1.3s ease-in-out;
 }
 
-.two p{
+.two p {
   margin-top: 8rem;
+  text-align: center;
 }
 
-.three{
+.three {
   grid-column: span 2;
   animation: bottomin 1.3s ease-in-out;
-  background: #272727;
+  background: #2c3333;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.three p{
+.three p {
   margin: auto;
+  text-align: center;
   color: #f5f5f7;
 }
 
-.eternal{
+.eternal {
   margin: auto;
   height: 150px;
   width: 150px;
@@ -178,7 +268,7 @@ a:hover{
   background: #fff;
 }
 
-.copyright{
+.copyright {
   display: flex;
   justify-content: center;
   height: 25px;
@@ -186,66 +276,65 @@ a:hover{
 }
 
 @keyframes topin {
-  from{
+  from {
     opacity: 0;
     transform: translateY(-50px);
   }
-  to{
+  to {
     opacity: 100;
-  }  
+  }
 }
 
 @keyframes rightin {
-  from{
+  from {
     font-size: 12px;
     opacity: 0;
     transform: translateX(150px);
   }
-  to{
+  to {
     opacity: 100;
-  }  
+  }
 }
 
 @keyframes leftin {
-  from{
+  from {
     opacity: 0;
     transform: translateX(-150px);
   }
-  to{
+  to {
     opacity: 100;
-  }  
+  }
 }
 
 @keyframes bottomin {
-  from{
+  from {
     opacity: 0;
     transform: translateY(150px);
   }
-  to{
+  to {
     opacity: 100;
-  }  
+  }
 }
 
-
 @media screen and (max-width: 1200px) {
-  .cardgrid{
+  .cardgrid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 980px) {
-  .cardgrid{
+  .cardgrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 850px) {
-  .m1{
+  .m1 {
     height: 25rem;
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .cardgrid{
+  .cardgrid {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 0;
   }

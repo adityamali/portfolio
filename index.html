@@ -2,87 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <div class="viewport">
-        <div class="container">
-            <section id="home" style="margin-top: 60px">
-                <div class="cardgrid">
-                    <div class="card one m1" data-tilt data-tilt-max="2">
-                        <div class="meimg">
-                            <div class="avatar"></div>
-                        </div>
-                        <h1>Hey I'm Aditya</h1>
-                        <ul>
-                          <li><i class="fab fa-instagram social" onclick="window.location.href='https://www.instagram.com/theadityamali';"></i></li>
-                          <li><i class="fab fa-twitter social"></i></li>
-                          <li><i class="fab fa-github social" onclick="window.location.href='https://github.com/adityamali'"></i></li>
-                          <li><i class="fab fa-linkedin social" onclick="window.location.href='https://www.linkedin.com/in/adityamali2003/'"></i></li>
-                        </ul>
-                    </div>
-                    <div class="card iam"></div>
-                    <div id="about" class="card two m1">
-                        <p>
-                            Hey So I'm Aditya Mali and currently I'm pursuing my Bachlors in Technology from Bharati Vidyapeeth Deemed to Be University College of Engineering Pune
-                        </p>
-                    </div>
-                    <div class="card three m1">
-                      <div class="eternal"></div>
-                      <p>Find me on EternalMac</p>
-                    </div>
-                </div>
-            </section>
-            <div class="copyright">
-              <p>Made with HTML, CSS & JS by Aditya Mali</p>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <h1 class="header">A.M.</h1>
+  <div class="svgholder" onclick="openNav()">
+    <svg class="burger" width="518" height="409" viewBox="0 0 518 409" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="Hamburger">
+      <rect id="l3" x="1" y="341" width="517" height="68" rx="34" fill="black" />
+      <rect id="l2" y="171" width="517" height="68" rx="34" fill="black" />
+      <rect id="l1" x="1" width="517" height="68" rx="34" fill="black" />
+    </g>
+  </svg>
+  </div>
+  <div class="viewport">
+    <div class="container">
+      <section id="home" style="margin-top: 60px">
+        <div class="cardgrid">
+          <div class="card one m1" data-tilt data-tilt-max="2">
+            <div class="meimg">
+              <div class="avatar"></div>
             </div>
+            <h1>Hey I'm Aditya</h1>
+            <ul>
+              <li><i class="fab fa-instagram social"
+                  onclick="window.location.href='https://www.instagram.com/theadityamali';"></i></li>
+              <li><i class="fab fa-twitter social"></i></li>
+              <li><i class="fab fa-github social" onclick="window.location.href='https://github.com/adityamali'"></i>
+              </li>
+              <li><i class="fab fa-linkedin social"
+                  onclick="window.location.href='https://www.linkedin.com/in/adityamali2003/'"></i></li>
+            </ul>
+          </div>
+          <div id="about" class="card two m1">
+            <p>
+              Hey So I'm Aditya Mali and currently I'm pursuing my Bachlors in Technology from Bharati Vidyapeeth Deemed
+              to Be University College of Engineering Pune
+            </p>
+          </div>
+          <div class="card three m1">
+            <div class="eternal"></div>
+            <p>EternalMac is a Tech blog that churns out meaningfull content for it's viewers</p>
+          </div>
+          <div class="card iam"></div>
         </div>
+      </section>
+      <div class="copyright">
+        <p>Made with HTML, CSS & JS by Aditya Mali</p>
+      </div>
     </div>
-    <script src="https://kit.fontawesome.com/dd096b3ac9.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/vanila-tilt.js"></script>
-    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
-    <script>const isTouchDevice = 'ontouchstart' in document.documentElement;
+  </div>
+  <script src="https://kit.fontawesome.com/dd096b3ac9.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/vanila-tilt.js"></script>
+  <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
+  <script>
 
-        disableScroll();
-        if (!isTouchDevice) smoothScroll();
-        
-        window.onresize = () => {
-          resizeBodyHeight();
-        };
-        
-        window.onload = () => {
-          enableScroll();
-          resizeBodyHeight();
-        };
-        
-        // Functions
-        
-        function disableScroll() {
-          document.body.style.overflow = 'hidden';
-        }
-        
-        function enableScroll() {
-          document.body.style.overflow = '';
-        }
-        
-        function smoothScroll() {
-          document.querySelector('.viewport').classList.add('SmoothScroll');
-        
-          new SmoothScroll({
-            target: document.querySelector('.container'),
-            scrollEase: 0.08,
-            maxOffset: 500,
-          });
-        }
-        
-        function resizeBodyHeight() {
-          document.body.style.height = document.querySelector('.viewport').scrollHeight + 'px';
-        }</script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "350px";
+      document.getElementById("main").style.marginLeft = "350px";
+      document.getElementsByClassName("container").style.width = "80vw"
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+
+    const isTouchDevice = 'ontouchstart' in document.documentElement;
+
+    disableScroll();
+    if (!isTouchDevice) smoothScroll();
+
+    window.onresize = () => {
+      resizeBodyHeight();
+    };
+
+    window.onload = () => {
+      enableScroll();
+      resizeBodyHeight();
+    };
+
+    // Functions
+
+    function disableScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+
+    function enableScroll() {
+      document.body.style.overflow = '';
+    }
+
+    function smoothScroll() {
+      document.querySelector('.viewport').classList.add('SmoothScroll');
+
+      new SmoothScroll({
+        target: document.querySelector('.container'),
+        scrollEase: 0.08,
+        maxOffset: 500,
+      });
+    }
+
+    function resizeBodyHeight() {
+      document.body.style.height = document.querySelector('.viewport').scrollHeight + 'px';
+    }</script>
 </body>
 
 </html>
