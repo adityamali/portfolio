@@ -16,17 +16,21 @@ body {
   line-height: 1.6;
 }
 
+ul{
+  list-style: none;
+}
+
 ::-webkit-scrollbar {
   width: 16px;
 }
 
 ::-webkit-scrollbar-track {
   width: 10px;
-  background-color: #f3eff5;
+  background-color: #F5F2E7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #999790;
   box-shadow: inset 0 0 10px 20px #22222271;
   border-radius: 100px;
   border: 4px solid #f3eff5;
@@ -160,10 +164,10 @@ a:hover {
 
 .cardgrid {
   position: relative;
-  top: 3rem;
+  top: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 19rem);
+  grid-template-rows: repeat(5, 1fr);
   column-gap: 2vw;
   row-gap: 2rem;
   padding-left: 2vw;
@@ -184,23 +188,35 @@ a:hover {
 }
 
 .one {
-  background: #084594; /*  linear-gradient(#084594, rgb(19, 71, 105)); */
+  background: linear-gradient(#084594 , #042b5f); 
   grid-column: span 3;
   grid-row: span 1;
   animation: rightin 900ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .one h1 {
+  position: relative;
   font-size: 36px;
   color: #fff;
   background-clip: text;
   -webkit-background-clip: text;
   perspective-origin: 10;
-  margin-left: 36px;
+  margin-left: 38px;
   margin-right: 10px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+#name{
+  font-family: 'Cookie', cursive;
+  font-size: 1.4em;
+}
+
 .one ul {
+  position: relative;
   list-style: none;
   display: inline-block;
 }
@@ -230,6 +246,25 @@ a:hover {
 
 .iam {
   grid-row: span 2;
+  color: #2c3333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgb(125, 46, 156), rgb(91, 33, 114) );
+}
+
+.profession{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  color: #f1f1f1;
+}
+
+.doimg{
+  height: 50px;
+  width: 50px;
 }
 
 .two {
@@ -237,10 +272,12 @@ a:hover {
   color: #272727;
   grid-column: span 2;
   animation: leftin 1.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .two p {
-  margin-top: 8rem;
   text-align: center;
 }
 
