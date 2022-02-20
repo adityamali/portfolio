@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -26,7 +26,7 @@ ul{
 
 ::-webkit-scrollbar-track {
   width: 10px;
-  background-color: #F5F2E7;
+  background-color: #f5f2e7;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,7 +62,7 @@ ul{
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #272727;
 }
 
 /* Position and style the close button (top right corner) */
@@ -90,14 +90,15 @@ ul{
   }
 }
 
-.top{
+.top {
   position: fixed;
   top: 0;
-  background: #f5f2e7f1;
-  backdrop-filter: blur(18px);
   z-index: 5;
   height: 60px;
   width: 100vw;
+  background: #f5f2e7dc;
+  backdrop-filter: blur(185px);
+  -webkit-backdrop-filter: blur(13.5px);
 }
 
 .header {
@@ -159,16 +160,12 @@ a:hover {
   font-weight: bold;
 }
 
-#home {
-  padding-bottom: 10vh;
-}
-
 .cardgrid {
   position: relative;
-  top: 1rem;
+  top: 2rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   column-gap: 2vw;
   row-gap: 2rem;
   padding-left: 2vw;
@@ -183,13 +180,13 @@ a:hover {
   border: 1px solid #f5f5f7;*/
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.01);
   transition-duration: 100ms;
 }
 
 .one {
-  background: linear-gradient(#084594 , #042b5f); 
+  background: linear-gradient(#084594, #042b5f);
   grid-column: span 3;
   grid-row: span 1;
   animation: rightin 900ms ease-in-out;
@@ -209,10 +206,10 @@ a:hover {
   margin-right: 10px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 
-#name{
-  font-family: 'Cookie', cursive;
+#name {
+  font-family: "Cookie", cursive;
   font-size: 1.4em;
 }
 
@@ -251,10 +248,10 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(rgb(125, 46, 156), rgb(91, 33, 114) );
+  background: linear-gradient(rgb(125, 46, 156), rgb(91, 33, 114));
 }
 
-.profession{
+.profession {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -263,7 +260,7 @@ a:hover {
   color: #f1f1f1;
 }
 
-.doimg{
+.doimg {
   height: 50px;
   width: 50px;
 }
@@ -307,15 +304,56 @@ a:hover {
 }
 
 .space {
-  height: 100vh;
-  background: #fff;
+  height: 1vh;
+  background: rgba(255, 255, 255, 0);
+}
+
+hr{
+  position: relative;
+  top: 6em;
+  width: 30vw;
+}
+
+#skills{
+  margin-top: 50px;
+}
+
+.myskilltitle{
+  text-align: center;
+  padding-right: 1em;
+  margin-top: 10em;
+}
+
+.flex_horizontal{
+  display: flex;
+  justify-content: center;
+}
+
+.skilllist{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill{
+  background: #272727;
+  padding: 30px;
+  height: 40px;
+  width: 30vw;
+  border-radius: 10px;
+  color: #f1f1f1;
+  margin-bottom: 2em;
+  margin-right: 2em;
 }
 
 .copyright {
+  position: relative;
   display: flex;
   justify-content: center;
+  z-index: 4;
   height: 25px;
   width: 100%;
+  bottom: 0;
 }
 
 @keyframes topin {
@@ -358,14 +396,20 @@ a:hover {
     opacity: 100;
   }
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .cardgrid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
 @media screen and (max-width: 980px) {
+  .avatar{
+    grid-column: span 2;
+    grid-column-start: 0;
+    grid-column-end: 3;
+
+  }
   .cardgrid {
     grid-template-columns: repeat(2, 1fr);
   }
