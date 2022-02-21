@@ -186,7 +186,7 @@ a:hover {
 }
 
 .one {
-  background: linear-gradient(#084594, #042b5f);
+  background: #084594;
   grid-column: span 3;
   grid-row: span 1;
   animation: rightin 900ms ease-in-out;
@@ -211,21 +211,6 @@ a:hover {
 .name {
   font-family: "Cookie", cursive;
   font-size: 1.4em;
-}
-
-.name::after {
-  content: "Aditya Mali";
-  position: absolute;
-  top: 15px;
-  left: 2.7em;
-  transform-origin: bottom;
-  transform: rotateX(180deg);
-  line-height: 0.85em;
-  background-image: linear-gradient(0deg, #ffffff70 0, transparent 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 0.7;
 }
 
 .one ul {
