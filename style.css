@@ -63,7 +63,6 @@ ul {
   font-size: 25px;
   color: #222222;
   display: block;
-  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -195,7 +194,7 @@ a:hover {
   background: #084594;
   grid-column: span 3;
   grid-row: span 1;
-  animation: rightin 900ms ease-in-out;
+  animation: topin 900ms ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,7 +252,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(rgb(125, 46, 156), rgb(91, 33, 114));
+  background: linear-gradient(#7d2e9c, #5b2172);
+  animation: rightin 900ms ease-in-out;
+}
+
+#imgim{
+  height: 4em;
+  width: 5em;
 }
 
 .profession {
@@ -347,7 +352,7 @@ hr {
 }
 
 .skill {
-  padding: 30px;
+  padding: 25px;
   height: 40px;
   width: 30vw;
   border-radius: 10px;
@@ -355,11 +360,15 @@ hr {
   box-shadow:  20px 20px 60px hsla(0, 0%, 75%, 0.5),
              -20px -20px 60px hsla(0, 0%, 100%, 0.5);
   margin-bottom: 2em;
-  margin-right: 2em;
+  margin: 1em;
 }
 
 .skillimg{
   height: 3em;
+}
+
+.skill p{
+  padding: 0.5em;
 }
 
 .copyright {
@@ -375,7 +384,7 @@ hr {
 @keyframes topin {
   from {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-150px);
   }
   to {
     opacity: 100;
@@ -430,7 +439,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 890px) {
   .m1 {
     height: 25rem;
     grid-column-start: 1;
@@ -439,5 +448,9 @@ hr {
   .cardgrid {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 0;
+  }
+  .iam{
+    grid-row-start: 3;
+    grid-row-end: 4;
   }
 }
